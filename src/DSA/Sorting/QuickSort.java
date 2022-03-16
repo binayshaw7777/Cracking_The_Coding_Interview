@@ -10,9 +10,8 @@ public class QuickSort {
         int n = sc.nextInt();
         int[] arr = new int[n];
         System.out.println("Enter the Array Elements: ");
-        for(int i=0; i<n; i++) {
+        for(int i=0; i<n; i++)
             arr[i] = sc.nextInt();
-        }
         System.out.println("Current Array: \n"+ Arrays.toString(arr));
         quickSort(arr, 0, n-1);
         System.out.println("Sorted Array: \n"+Arrays.toString(arr));

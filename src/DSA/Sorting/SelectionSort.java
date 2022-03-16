@@ -10,9 +10,8 @@ public class SelectionSort {
         int n = sc.nextInt();
         int[] arr = new int[n];
         System.out.println("Enter the Array Elements: ");
-        for(int i=0; i<n; i++) {
+        for(int i=0; i<n; i++)
             arr[i] = sc.nextInt();
-        }
         System.out.println("Current Array: \n"+ Arrays.toString(arr));
         selectionSort(arr);
         System.out.println("Sorted Array: \n"+Arrays.toString(arr));
@@ -22,9 +21,8 @@ public class SelectionSort {
         for(int i=0; i<arr.length-1; i++) {
             int min = i;
             for(int j = i+1; j<arr.length; j++) {
-                if(arr[j] < arr[min]) {
+                if(arr[j] < arr[min])
                     min = j;
-                }
             }
             if(min!=i)
                 swap(arr, min, i);
