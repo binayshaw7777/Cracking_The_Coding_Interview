@@ -1,4 +1,4 @@
-package DSA;
+package DSA.Sorting;
 
 import java.util.Arrays;
 import java.util.Scanner;
