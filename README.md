@@ -42,7 +42,7 @@ you'll get your name updated in the Readme file :D
 
 
 ## 🚀 About Me
-I'm a 2nd Year undergrad CSE Student. I'm an Android Developer.
+I'm a 2nd Year undergrad CSE Student and an Android Developer.
 I like helping people and wanted to learn together.
 
 
