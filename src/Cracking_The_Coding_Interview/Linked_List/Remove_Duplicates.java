@@ -1,3 +1,16 @@
+/**
+ * <br> Problem Statement :
+ *
+ * Write a code to remove duplicates from an unsorted linked list.
+ *
+ * Example:
+ * Input = 5 -> 3 -> 5 -> 4 -> 8-> 8-> 9-> 1-> null
+ * Output = 5 —> 3 —> 4 —> 8 —> 9 —> 1 —> null
+ * </br>
+ *
+ */
+
+
 package Cracking_The_Coding_Interview.Linked_List;
 
 class ListNode{
