@@ -15,7 +15,7 @@
  */
 
 
-package Cracking_The_Coding_Interview;
+package Cracking_The_Coding_Interview.Arrays_and_Strings;
 
 import java.util.HashMap;
 import java.util.Scanner;

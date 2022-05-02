@@ -33,7 +33,7 @@ public class Left_View {
         System.out.println(list);
     }
 
-    //Function to print Right View of a Binary Tree
+    //Function to print Left View of a Binary Tree
     private static void LV(Left_View.Node root, List<Integer> list, int level) {
         if (root == null) return;
         if (level == list.size()) list.add(root.val);

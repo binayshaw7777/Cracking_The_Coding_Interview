@@ -13,7 +13,7 @@
  */
 
 
-package Cracking_The_Coding_Interview;
+package Cracking_The_Coding_Interview.Arrays_and_Strings;
 import java.util.Scanner;
 public class String_Rotation {
     public static void main(String[] args) {
