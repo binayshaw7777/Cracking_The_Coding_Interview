@@ -7,9 +7,10 @@
  * permutation is a rearrangement of letters. The palindrome
  * does not need to be limited to just dictionary words.
  *
- * ex. Input : Tact Coa
+ * ex 1. Input : Tact Coa
  * Output : True (permutations : "taco cat", "atco cta", etc.)
- *
+ * ex 2. Input : civil
+ *  Output : False
  * </br>
  *
  */
@@ -18,7 +19,9 @@
 package Cracking_The_Coding_Interview.Arrays_and_Strings;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Map.Entry;
 
 public class Palindrome_Permutation {
     public static void main(String[] args){
@@ -29,24 +32,29 @@ public class Palindrome_Permutation {
         System.out.println(PermutationPalindrome(st));
     }
     public static boolean PermutationPalindrome(String st){
-        HashMap<Character, Integer> charCount = new HashMap<Character, Integer>();  // Maps each character to a number. a->0 ,b->1 ,c->2
-        int oddCounts = 0;
+        if (st == null){
+            return false;
+        }
+        int oddCount=0;
         st = st.toLowerCase();
-        for (int i = 0; i < st.length(); i++) {
-
-            char ch = st.charAt(i);
-            if (((int) st.charAt(i)) < ((int) 'a') || (int) st.charAt(i) > ((int) 'z'))   // iterates through each character in string 'st' until it finds one which is not 'a' or 'z'
-                continue;
-
-            charCount.put(ch, (charCount.get(ch) == null ? 0 : charCount.get(ch) + 1));
-
-            if (charCount.get(ch) % 2 == 1) { //checks whether the characters are odd or even
-                oddCounts++;
-            } else {
-                oddCounts--;
+        Map<Character,Integer> countMap = new HashMap<>();
+        for(int i=0;i<st.length();i++){
+            char curr = st.charAt(i);
+            if (Character.isLetter(curr) || Character.isDigit(curr)){
+                if (countMap.containsKey(curr)){
+                    countMap.put(curr, countMap.get(curr)+1);
+                }else{
+                    countMap.put(curr,1);
+                }
             }
         }
-        return (oddCounts <= 1);
+
+        for (Entry<Character, Integer> data : countMap.entrySet()){
+            if (data.getValue() % 2!=0){
+                oddCount++;
+            }
+        }
+        return oddCount<=1;
     }
 
 }
