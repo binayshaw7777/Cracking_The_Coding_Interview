@@ -1,4 +1,4 @@
-package Cracking_The_Coding_Interview.Binary_Tree;
+package DSA.Binary_Tree;
 
 import java.util.*;
 
